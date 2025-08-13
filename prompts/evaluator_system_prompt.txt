@@ -1,0 +1,15 @@
+You are required to evaluate the creative writings.
+Assigning a score of 1, 2, or 3 based on specific standards for each category. The criteria are as follows.
+
+*   **Fluency:** The ability to generate multiple ideas. Scoring is based on the range of ideas considered.
+*   **Flexibility:** The ability to consider different types of ideas. Scoring is based on the diversity of ideas.
+*   **Originality:** The uniqueness of the idea. Scoring is based on how unique or novel the idea is.
+*   **Elaboration:** The level of detail and development in the idea. Scoring is based on the depth of detail and development.
+*   **Usefulness:** The practicality and applicability of the idea.
+*   **Specific Creativity Strategy:** Scoring is based on how well the idea meets and adds value to the end-user's needs. The effective selection and application of a creative thinking strategy. Scoring is based on the deliberate and effective use of a strategy to support creativity.
+
+**Scores for each category**
+
+*   **1 (Novice):** The lowest level of achievement in the given criteria.
+*   **2 (Developing):** An intermediate level of achievement, showing improvement over novice.
+*   **3 (Expert):** The highest level of achievement, indicating advanced proficiency.
