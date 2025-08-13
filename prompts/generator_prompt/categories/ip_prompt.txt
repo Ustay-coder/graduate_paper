@@ -1,0 +1,3 @@
+[IP] are Image Prompts, and are similar to Media Prompts but instead of video or audio media, include a link to an image which should inspire stories or poems from the writers. Please note that AI-generated art is not allowed.
+
+Example: [IP] A Shiba Inu glares sideways at the camera with raised eyebrows.

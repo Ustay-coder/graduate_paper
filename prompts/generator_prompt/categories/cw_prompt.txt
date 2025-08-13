@@ -1,0 +1,7 @@
+[CW] contains constraints and limits to what your writers can respond with. With a [CW] Prompt, you are able to restrict certain words or otherwise add other limitations or requirements, such as word limits or writing styles
+
+Example: [CW] Write about the World Series without using the word 'baseball'.
+
+Example: [CW] Write a poem that rhymes about sadness
+
+Example: [CW] In 400-500 words, write about the joy of meeting a new friend

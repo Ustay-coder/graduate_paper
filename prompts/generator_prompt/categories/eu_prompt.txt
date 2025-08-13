@@ -1,0 +1,7 @@
+[EU] is a tag intended to bring writers and readers alike into a pre-established world with fan fiction, adding new scenarios to beloved series and characters such as Harry Potter, Transformers, CSI, and anything else in the world of fictional media.
+
+You are also encouraged, though not required, to include links to reference wikis for the particular universe, especially if the prompt is vague or the EU is not well known, in the additional text box.
+
+Example: [EU] The Chicago Cubs and the Avengers have a baseball game.
+
+Example: [EU](Warhammer40K) Emperor of Mankind goes out for tea.

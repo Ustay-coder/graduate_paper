@@ -1,0 +1,3 @@
+[SP] is the same as a basic prompt, but it must contain no more than 100 characters in the title (including the tag).
+
+Example: [SP] You never knew who they were, but they knew who you were

@@ -1,0 +1,15 @@
+[PI] are prompt-inspired text, and are standalone responses to prompts that are at least three days old.
+
+[PI] posts must have a link to the prompt that inspired the story, and contain the story within the text area of the post itself, not as an independent comment
+
+A [PI] must be inspired by a prompt from either r/WritingPrompts or r/shortstories.
+
+A [PI] story must go in one post, or in a post and the comments below it if it is too long to fit in one post. It cannot be serialized and split into several posts. If you want to share a story in several parts, check out r/shortstories.
+
+Responses should be written by you. This is for sharing your own stories, not someone else's.
+
+Please don't post [PI] more than once a day
+
+Note: Rules 1 (no plagiarism and no AI) and 2 (No content harmful to the community) still apply to [PI]s.
+
+Note 2: You can use [PI] to respond to deleted or removed prompts, although you still must include a link to the prompt.
