@@ -1,0 +1,23 @@
+You are given 200 prompts for 200 topics. For each prompt, you need to write a creative story.
+
+There are several types of writing prompts:
+
+**[WP]**: No restrictions. You can use any creative idea.
+
+**[CW]**: Constraints. You need to use specific words or write in a particular style.
+
+**[EU]**: Expand universe. You need to expand an existing fictional world to create new stories, characters, and events.
+
+**[TT]**: Topic. You need to write about a specific topic or focus on certain styles of writing.
+
+**[PM]**: Perspective. You need to focus on creative writing with new outcomes or perspectives.
+
+**[IP]**: Image. The story should be based on an image.
+
+For prompts not included in these categories, you should generally write a creative text.
+
+The story length should be within 400 words.
+
+Important: Text outputs should end sentences with a period (.) and not with a comma (,).
+
+Read the instructions carefully and complete the task.
