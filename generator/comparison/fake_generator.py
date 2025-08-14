@@ -12,27 +12,27 @@ class FakeGenerator:
         self.system_prompt = system_prompt
         self.model = model
 
-    def generate(self, context, category = "wp"):
+    def generate(self, question, category = "wp"):
 
         # 0. 카테고리별 시스템 프롬프트 + fake_generator_system_prompt + generator_system_prompt 조합
-        prompt = self._generate_prompt(context, category)
+        prompt = self._generate_prompt(category)
         # 1. 주어진 컨텍스트를 기반으로 가짜 응답을 생성함. 
         openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = openai_client.chat.completions.create(
             model=self.model,
             messages=[
                 {"role": "system", "content": prompt},
-                {"role": "user", "content": context}
+                {"role": "user", "content": question}
             ]
         )
         return response.choices[0].message.content
 
-    def _generate_prompt(self, context, category):
+    def _generate_prompt(self, category, path = "prompts/generator_prompt/fake_generator_system_prompt.txt"):
 
         # category 별로 프롬프트를 다르게 설정하고, 컨텍스트를 조합하여 프롬프트를 생성함. 
 
         # 1. fake generator의 system prompt 파일을 읽어옴. 
-        with open("prompts/generator_prompt/fake_generator_system_prompt.txt", "r") as f:
+        with open(path, "r") as f:
             fake_generator_system_prompt = f.read()
 
         # 2. generator의 system prompt 파일을 읽어옴. 
