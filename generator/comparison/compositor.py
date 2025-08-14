@@ -13,28 +13,28 @@ class Compositor:
         self.system_prompt = system_prompt
         self.model = model
 
-    def _generate_fake_response(self, question):
+    def _generate_fake_response(self, question, category = "wp"):
         
         # fake generator로부터 가짜 응답을 생성하는 부분 
         fake_generator = FakeGenerator(self.llm, self.system_prompt)
-        fake_response = fake_generator.generate(question)
+        fake_response = fake_generator.generate(question, category)
         return fake_response
 
-    def _generate_real_response(self, question):
+    def _generate_real_response(self, question, category = "wp"):
 
         # real generator로부터 진실된 응답을 생성하는 부분 
         real_generator = RealGenerator(self.llm, self.system_prompt)
-        real_response = real_generator.generate(question)
+        real_response = real_generator.generate(question, category)
         return real_response
 
-    def generate(self, question):
+    def generate(self, question, category = "wp", alpha = 0.5):
 
         # 1. 질문을 가지고 fake_generator와 real_generator의 응답을 생성함.
-        fake_response = self._generate_fake_response(question)
-        real_response = self._generate_real_response(question)
+        fake_response = self._generate_fake_response(question, category)
+        real_response = self._generate_real_response(question, category)
 
         # 2. 생성된 응답을 일정 비율로 조합하여 새로운 응답을 생성함. 
-        compositor_response = self._generate_compositor_response(fake_response, real_response)
+        compositor_response = self._generate_compositor_response(fake_response, real_response, alpha)
 
         return compositor_response
 
