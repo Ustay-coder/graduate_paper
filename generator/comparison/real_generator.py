@@ -12,10 +12,15 @@ class RealGenerator:
         self.model = model
 
     def generate(self, question, category = "wp"):
+        print("       RealGenerator.generate() 시작...")
 
         # 0. 카테고리별 시스템 프롬프트 + real_generator_system_prompt + generator_system_prompt 조합
+        print("       프롬프트 생성 중...")
         prompt = self._generate_prompt(category)
+        print("       프롬프트 생성 완료")
+        
         # 1. 주어진 컨텍스트를 기반으로 현실적인 응답을 생성함. 
+        print("       OpenAI API 호출 중...")
         openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         response = openai_client.chat.completions.create(
             model=self.model,
@@ -24,6 +29,7 @@ class RealGenerator:
                 {"role": "user", "content": question}
             ]
         )
+        print("       OpenAI API 호출 완료")
         return response.choices[0].message.content
 
     def _generate_prompt(self, category, path = "prompts/generator_prompt/real_generator_system_prompt.txt"):

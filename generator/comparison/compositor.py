@@ -30,13 +30,21 @@ class Compositor:
         return real_response
 
     def generate(self, question, category = "wp", alpha = 0.5):
+        print("     Compositor.generate() 시작...")
 
         # 1. 질문을 가지고 fake_generator와 real_generator의 응답을 생성함.
+        print("     Fake Generator 응답 생성 중...")
         fake_response = self._generate_fake_response(question, category)
+        print("     Fake Generator 응답 생성 완료")
+        
+        print("     Real Generator 응답 생성 중...")
         real_response = self._generate_real_response(question, category)
+        print("     Real Generator 응답 생성 완료")
 
         # 2. 생성된 응답을 일정 비율로 조합하여 새로운 응답을 생성함. 
+        print("     응답 조합 중...")
         compositor_response = self._generate_compositor_response(fake_response, real_response, alpha)
+        print("     응답 조합 완료")
 
         return compositor_response
 
