@@ -1,7 +1,12 @@
+from dotenv import load_dotenv
+import os
 from generator.comparison.compositor import Compositor
 from generator.control.generator import Generator
 from evaluator.evaluator import Evaluator
 from generator.utils import load_system_prompt
+
+# .env 파일 로드
+load_dotenv()
 
 def main(): 
 
@@ -10,7 +15,7 @@ def main():
     # 1-1. Generator의 시스템 프롬프트를 로드함
     system_prompt = load_system_prompt("prompts/generator_prompt/generator_system_prompt.txt") 
     # 1-2. Compositor의 system prompt 설정함. 
-    compositor_system_prompt = load_system_prompt("prompts/generator_prompt/compositor_system_prompt.txt")
+    compositor_system_prompt = load_system_prompt("prompts/compositor_prompt/compositor_system_prompt.txt")
     # 2. 동일한 질문을 가지고 generator/comparsion, generator/control 두 그룹에서 데이터를 생성함. 
 
     for question in test_questions_list:
