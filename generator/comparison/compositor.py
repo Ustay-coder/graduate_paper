@@ -14,12 +14,18 @@ class Compositor:
         self.model = model
 
     def _generate_fake_response(self, question):
-        fake_generator = FakeGenerator(self.llm, self.prompt)
-        pass
+        
+        # fake generator로부터 가짜 응답을 생성하는 부분 
+        fake_generator = FakeGenerator(self.llm, self.system_prompt)
+        fake_response = fake_generator.generate(question)
+        return fake_response
 
     def _generate_real_response(self, question):
-        real_generator = RealGenerator(self.llm, self.prompt)
-        pass
+
+        # real generator로부터 진실된 응답을 생성하는 부분 
+        real_generator = RealGenerator(self.llm, self.system_prompt)
+        real_response = real_generator.generate(question)
+        return real_response
 
     def generate(self, question):
 
