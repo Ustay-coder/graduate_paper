@@ -2,6 +2,7 @@ from generator.comparison.fake_generator import FakeGenerator
 from generator.comparison.real_generator import RealGenerator
 from openai import OpenAI
 import os
+from generator.utils import load_system_prompt
 
 """
 LLM을 사용하여 fake_generator와 real_generator의 응답을 적절한 비율로 조합하여 새로운 응답을 생성하는 데이터 생성기 입니다. 
@@ -10,6 +11,8 @@ LLM을 사용하여 fake_generator와 real_generator의 응답을 적절한 비�
 class Compositor:
     def __init__(self, system_prompt, model = "gpt-4o"):
         self.system_prompt = system_prompt
+        self.fake_generator_system_prompt = load_system_prompt("prompts/generator_prompt/fake_generator_system_prompt.txt")
+        self.real_generator_system_prompt = load_system_prompt("prompts/generator_prompt/real_generator_system_prompt.txt")
         self.model = model
 
     def _generate_fake_response(self, question, category = "wp"):
