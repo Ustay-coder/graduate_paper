@@ -8,22 +8,21 @@ LLM을 사용하여 fake_generator와 real_generator의 응답을 적절한 비�
 """
 
 class Compositor:
-    def __init__(self, llm, system_prompt, model = "gpt-4o"):
-        self.llm = llm
+    def __init__(self, system_prompt, model = "gpt-4o"):
         self.system_prompt = system_prompt
         self.model = model
 
     def _generate_fake_response(self, question, category = "wp"):
         
         # fake generator로부터 가짜 응답을 생성하는 부분 
-        fake_generator = FakeGenerator(self.llm, self.system_prompt)
+        fake_generator = FakeGenerator(self.system_prompt)
         fake_response = fake_generator.generate(question, category)
         return fake_response
 
     def _generate_real_response(self, question, category = "wp"):
 
         # real generator로부터 진실된 응답을 생성하는 부분 
-        real_generator = RealGenerator(self.llm, self.system_prompt)
+        real_generator = RealGenerator(self.system_prompt)
         real_response = real_generator.generate(question, category)
         return real_response
 

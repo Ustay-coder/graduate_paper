@@ -8,8 +8,7 @@ LLM을 사용하여 컨트롤 데이터를 생성하는 데이터 생성기 입�
 """
 
 class Generator:
-    def __init__(self, llm, system_prompt, model = "gpt-4o"):
-        self.llm = llm
+    def __init__(self, system_prompt, model = "gpt-4o"):
         self.system_prompt = system_prompt
         self.model = model
 

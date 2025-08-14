@@ -7,8 +7,7 @@ LLM을 사용하여 현실에 존재하는 내용을 기반으로 답변하는 L
 """
 
 class RealGenerator:
-    def __init__(self, llm, system_prompt, model = "gpt-4o"):
-        self.llm = llm
+    def __init__(self, system_prompt, model = "gpt-4o"):
         self.system_prompt = system_prompt
         self.model = model
 
