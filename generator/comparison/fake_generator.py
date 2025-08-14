@@ -1,6 +1,6 @@
 import os
 from openai import OpenAI
-from generator.comparison.utils import load_category_prompt
+from generator.utils import load_category_prompt
 
 """
 LLM을 사용하여 현실에 존재하지 않는 내용을 기반으로 답변하는 LLM 기반 데이터 생성기 입니다. 
@@ -35,15 +35,12 @@ class FakeGenerator:
         with open(path, "r") as f:
             fake_generator_system_prompt = f.read()
 
-        # 2. generator의 system prompt 파일을 읽어옴. 
-        generator_system_prompt = self.system_prompt
-
 
         # 3. 카테고리별 프롬프트를 가져옴
         category_prompt = load_category_prompt(category)
 
         # 4. 모든 프롬프트를 조합
-        prompt = self.system_prompt + "\n\n" + fake_generator_system_prompt + "\n\n" + category_prompt + "\n\n" + generator_system_prompt
+        prompt = self.system_prompt + "\n\n" + fake_generator_system_prompt + "\n\n" + category_prompt
         
         return prompt
 
