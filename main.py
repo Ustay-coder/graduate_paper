@@ -67,10 +67,13 @@ def main():
         print(f"   data_control: {data_control}\n")
 
     # 3. 생성된 데이터를 evaluator에서 평가함. 
-    # evaluator = Evaluator()
-    # data_comparison_evaluated = evaluator.evaluate(data_comparison)
-    # data_control_evaluated = evaluator.evaluate(data_control)
-    
+    evaluator = Evaluator(prompt = "prompts/evaluator_prompt/evaluator_system_prompt.txt")
+    data_comparison_evaluated = evaluator.evaluate(data_comparison)
+    data_control_evaluated = evaluator.evaluate(data_control)
+
+    print(f"   data_comparison_evaluated: {data_comparison_evaluated}")
+    print(f"   data_control_evaluated: {data_control_evaluated}")
+
     # # 4. 평가된 데이터를 비교함.
     # analyze = evaluator.analyze(data_comparison_evaluated, data_control_evaluated)
 
